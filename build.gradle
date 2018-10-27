@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+group 'com.mirek'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '2.0.6.RELEASE', ext: 'pom'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.0.6.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

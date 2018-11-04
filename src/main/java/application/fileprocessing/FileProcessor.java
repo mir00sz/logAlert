@@ -1,16 +1,16 @@
 package application.fileprocessing;
 
-import application.dao.AlertRepository;
+import application.dao.EventRepository;
 import org.springframework.stereotype.Service;
 
 @Service
 public class FileProcessor {
 
 
-    private AlertRepository alertRepository;
+    private EventRepository eventRepository;
 
-    public FileProcessor(AlertRepository alertRepository) {
-        this.alertRepository = alertRepository;
+    public FileProcessor(EventRepository eventRepository) {
+        this.eventRepository = eventRepository;
     }
 
     public void processFile(){

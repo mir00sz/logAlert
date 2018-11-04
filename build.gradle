@@ -1,24 +1,43 @@
-plugins {
-    id 'java'
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.6.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+bootJar {
+    baseName = 'event-alert'
+    version =  '0.1.0'
 }
 
 group 'com.mirek'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
 
 repositories {
     mavenCentral()
 }
 
+
 dependencies {
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '2.0.6.RELEASE', ext: 'pom'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.0.6.RELEASE'
     compile group: 'org.hibernate', name: 'hibernate-core', version: '5.3.7.Final'
     compile group: 'org.hsqldb', name: 'hsqldb', version: '2.4.1'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.0.6.RELEASE'
-
-
-
+    compile group: 'org.hibernate', name: 'hibernate-ehcache', version: '5.3.7.Final'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.7'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.7'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.7'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+

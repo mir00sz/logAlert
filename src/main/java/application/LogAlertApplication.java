@@ -85,10 +85,6 @@ public class LogAlertApplication implements CommandLineRunner {
 
         );
 
-
-        Iterable<Event> iterable = eventRepository.findAll();
-        //iterable.forEach(j->System.out.println("received: " + j.getEventDuration()));
-
         LOG.info("finish");
 
     }

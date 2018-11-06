@@ -78,7 +78,7 @@ public class LogAlertApplication implements CommandLineRunner {
                         eventRepository.save(event);
 
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        LOG.error(e.getMessage());
                     }
                 }
 

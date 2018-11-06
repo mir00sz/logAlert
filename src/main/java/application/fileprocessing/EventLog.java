@@ -1,7 +1,9 @@
 package application.fileprocessing;
 
-public class EventLog {
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+public class EventLog {
 
     private String id;
 
@@ -13,6 +15,18 @@ public class EventLog {
 
     private String host;
 
+    @JsonCreator
+    public EventLog(@JsonProperty(value = "id", required = true) String id,
+                    State state,
+                    long timestamp,
+                    String type,
+                    String host) {
+        this.id = id;
+        this.state = state;
+        this.timestamp = timestamp;
+        this.type = type;
+        this.host = host;
+    }
 
     public String getId() {
         return id;

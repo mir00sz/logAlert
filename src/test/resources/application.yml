@@ -1,0 +1,23 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        cache:
+          use_second_level_cache: true
+          region:
+            factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+        dialect: org.hibernate.dialect.HSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    show-sql: true
+
+  datasource:
+    url: jdbc:hsqldb:file:./alertsdatabase/alerts
+    username: alert
+    password: alert
+
+  main:
+    web-application-type: none

@@ -45,7 +45,7 @@ public class JsonToEventLogMapperTest {
         String json = "{\"state\":\"STARTED\", \"type\":\"APPLICATION_LOG\",\n" +
                 "\"timestamp\":1491377495212}";
         JsonToEventLogMapper jsonToEventLogMapper = new JsonToEventLogMapper();
-        EventLog eventLog = jsonToEventLogMapper.jsonToEventLog(json);
+        jsonToEventLogMapper.jsonToEventLog(json);
 
 
     }
@@ -56,7 +56,7 @@ public class JsonToEventLogMapperTest {
                 "\"unknownproperty\":1491377495212}";
 
         JsonToEventLogMapper jsonToEventLogMapper = new JsonToEventLogMapper();
-        EventLog eventLog = jsonToEventLogMapper.jsonToEventLog(json);
+        jsonToEventLogMapper.jsonToEventLog(json);
 
     }
 

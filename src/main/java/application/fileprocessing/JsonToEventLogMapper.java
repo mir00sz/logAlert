@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class JsonToEventLogMapper {
 
-    private ObjectMapper objectMapper;
+    private final ObjectMapper objectMapper;
 
     public JsonToEventLogMapper() {
         this.objectMapper = new ObjectMapper();

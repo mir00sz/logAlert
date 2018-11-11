@@ -17,10 +17,10 @@ public class EventLog {
 
     @JsonCreator
     public EventLog(@JsonProperty(value = "id", required = true) String id,
-                    State state,
-                    long timestamp,
-                    String type,
-                    String host) {
+                    @JsonProperty(value = "state") State state,
+                    @JsonProperty(value = "timestamp") long timestamp,
+                    @JsonProperty(value = "type") String type,
+                    @JsonProperty(value = "host") String host) {
         this.id = id;
         this.state = state;
         this.timestamp = timestamp;

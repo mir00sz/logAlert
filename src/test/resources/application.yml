@@ -15,7 +15,7 @@ spring:
     show-sql: true
 
   datasource:
-    url: jdbc:hsqldb:file:./alertsdatabase/alerts
+    url: jdbc:hsqldb:mem:alerts
     username: alert
     password: alert
 
